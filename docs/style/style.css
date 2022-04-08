@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+html{
+  background: #FFF;
+}
 
 body {
-  background-color: palevioletred;
-  border-radius: 100%;
-  bottom: 50%;
+  background-color: goldenrod;
+  margin: 0;
+  padding: 1%;
 }
 container{
   display: grid;
@@ -51,6 +54,11 @@ footer {
   display: grid;
   grid-template-columns: auto auto auto;
 }
+
+#start{
+  font-family: "press start 2p", monospace;
+
+}
   
 
 .center {
@@ -65,14 +73,6 @@ footer {
   text-align: center;
 }
 
-.str1,
-.str2 {
-  display: inline-block;
-}
-
-.str1 {
-  padding-right: 15px;
-}
 
 #start-button {
   background-color: plum;
@@ -80,14 +80,16 @@ footer {
   height: 60px;
   border-radius: 40%;
   margin-top: 1rem;
-  margin-left: 35%;
+  margin-left: center;
 }
-#instructions{
-
-  margin-top: 1rem;
-  color: aqua;
-  font-size: 40px;
-  margin-left: 40%;
+footer {
+  font-family: "Press Start 2P", monospace;
+  font-size: medium;
+  height: 10%;
+  color: purple;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-items: center;
 }
 
 .counter {
@@ -122,11 +124,9 @@ footer {
   opacity: 0.8;
 }
 
-@media only screen and (min-width: 640px) {
-  .darkRed,
-  .darkGreen,
-  .darkYellow,
-  .darkBlue {
+@media only screen and (max-width: 600px) {
+  #top-left
+  {
     width: 175px;
     height: 175px;
     display: inline-block;
@@ -138,7 +138,7 @@ footer {
     margin-left: 36%;
   }
 }
-
+/*
 @media (min-width:320px) {
   .darkRed,
   .darkGreen,
@@ -154,7 +154,7 @@ footer {
     margin-left: 18%;
   }
 }
-
+/*
 @media (min-width:481px) {
   .darkRed,
   .darkGreen,
