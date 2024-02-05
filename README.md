@@ -2,111 +2,41 @@
 
 ## Beep Boop; Beep Boop; BRR BRR BRR
 
-Your goal over the course of the next two weeks is to build a reasonably-function version of the hit Hasbro game, Simon.
+- The Simon game project is an interactive web-based application that replicates the classic electronic game of memory skill. In this game, players are challenged to follow an increasingly complex sequence of lights and sounds. With each turn, the game adds one element to the sequence, and the player must replicate the sequence without mistakes. The game utilizes HTML, CSS, and JavaScript to create a user-friendly interface where players interact with colored buttons on the screen.
 
-[![It was LIT](https://img.youtube.com/vi/G6p7zRsECaI/maxresdefault.jpg)](https://www.youtube.com/watch?v=G6p7zRsECaI)
+# Here's a detailed description of the project
 
-To do this, we will learn the basics of Javscript, namely `events` and `functions`. This will fall in line with our understanding
-that HTML and CSS largely _mean_ things and that Javascript _does_ things. However, there are a few steps that we'll look at along
-the way, namely:
+## Project Overview
 
-### Requirements
+**Title: Web-Based Simon Game**
+**Technologies Used: HTML, CSS, JavaScript**
 
-#### Design
+*Game Mechanics:*
 
-* Full UI containing:
-  * 4 multicolored `<button>`s in either a "radial" (i.e. circle) design _or_ square grid design
-  * a footer which displays game name, `Start` button, and score
-* `<button>`s must be given IDs:
-  * `top-left`
-  * `top-right`
-  * `bottom-left`
-  * `bottom-right`
-  * `start-button`
-* The score display in the footer should be give the ID `points` (see above for required contents)
-* The design should be fully responsive, changing form when we hit the mobile "breakpoint", defined here as `1024px` (this definition varies)
+- The game consists of four colored buttons, each producing a specific tone when activated or clicked.
+- At the start of the game, the system randomly selects one of the buttons to light up and plays the corresponding sound.
+- Players must remember the sequence and replicate it by pressing the buttons in the correct order.
+- With each successful round, the sequence becomes longer by one, making the game progressively more challenging.
+- If a player fails to reproduce the sequence correctly, the game ends, and a "game over" sound is played. The player is then prompted to start a new game.
 
-##### Wireframes
+*Features*
 
-Traditionally, when working on designs in the web space, you'll develop or be given "wireframes." These can range from sparse to dense in
-information population. For the purposes of our assignment, they're relatively general.
+- *Interactive UI*: The game's interface is designed for simplicity and ease of use, with large, colorful buttons that visually and audibly respond to interactions.
+- *Dynamic Difficulty*: The game's difficulty increases with each turn, testing the player's memory and concentration skills.
+- *Sound Effects*: Each button has its own unique sound that plays when the button is activated, enhancing the sensory experience of the game.
+- *Score Tracking*: The game keeps track of the player's score based on the number of successfully completed sequences, displaying the current points on the screen.
+- *Restart Capability*: Players can start a new game at any time by pressing a "start" button, allowing for quick retries after a loss.
 
-School references..(to be deleted)
+*Development Considerations*
 
-###### Desktop
+- *Modular JavaScript*: The game logic is encapsulated in functions that handle game turns, button activation, sound playback, and sequence validation to keep the code organized and maintainable.
+- *Responsive Design*: CSS is used to ensure the game's layout is responsive and adapts to different screen sizes, providing a consistent experience across devices.
+- *Accessibility*: Efforts are made to make the game accessible, including clear visual cues for active buttons and potentially adding keyboard controls for improved accessibility.
 
-![On yr main](https://allegheny-computerscience-302-s2022.github.io/cmpsc-302-week-4-basic-javascript-solution/media/desktop-wireframe.png)
+*Project Goals*
 
-###### Mobile
+- The primary goal of this project is to create a fun and engaging web-based version of the Simon game that challenges users' memory skills. Additionally, the project aims to demonstrate proficiency in front-end web development technologies and practices, including responsive design, interactive JavaScript, and user experience design.
 
-![On the Go](https://allegheny-computerscience-302-s2022.github.io/cmpsc-302-week-4-basic-javascript-solution/media/mobile-wireframe.png)
+- This project serves both as an entertaining game for users and as a showcase of web development skills, including client-side scripting, HTML structure, and CSS styling.
 
-#### Functionality
-
-* Game "activates" when `Start` button clicked
-  * This should convert the "Press Start to Play" text to a "Points: ##" display (where `##` is the varying number of points
-* The game should generate random patterns that increase by 1 additional step after each "successful" round
-  * Here, "successful" means that a player achieved the demonstrated pattern in the given amount of time
-* The player's turn "fails" if they take more than `5 * level` seconds to enter any one part of the pattern
-  * `level` should be taken to mean the number of steps in the pattern
-* On each successfuly turn, a player's score should increase by `1`
-* If a player fails to complete the pattern, the start button should turn a "Game Over" button, and the game should stop.
-
-## Making a GitHub Pages page
-
-This project also requires you to make your work available via GitHub Pages. For a primer on where to find it
-and how to do it:
-
-* [ ] locate and click the `Settings` tab at the top of the screen
-* [ ] from the menu at the left, select `Pages`
-* [ ] locate the "Source" heading; set the "Branch" as `main`, and change the second drop-down to `/docs`
-* [ ] click `Save`
-* [ ] One last step: make the page _public_ by setting `GitHub Pages visibility` to `Public`
-  * This step is _required_ for your HTML and CSS to pass validation!
-A green box will appear at the top of the page listing the random URL that you've been assigned. This is your
-URL!
-
-## "Cloning" a repository
-
-### Using the correct download link
-
-* [ ] On this repository's page, click the `Clone or download` button in the upper right hand corner
-
-* You may need to scroll up to see it
-
-* [ ] In the upper right corner of the box that appears, click `Use SSH`
-
-* [ ] Copy the link that appears in the textbox below the phrase "Use a password with a protected key."
-
-#### Cloning
-
-* [ ] Type `ls` in your terminal window
-* You should be in your `~` directory
-
-* [ ] Find the folder you've made to hold class assignments (may involve `cd`ing)
-
-* [ ] Once there, "clone" the repository using the link copied above
-  
-## Wrap-up
-
-### Submitting the assignment/saving progress
-
-The GitHub platform is a place to store your work. So, it makes some sense that should be able to _clone_ (download) from it, and push back (upload) to it. Here, we'll learn this second part.
-
-* [ ] `cd` to your `~` folder
-* [ ] Locate your `Project folder` folder and `cd` to it.
-
-Once in this folder, we need to tell git that there have been changes.
-
-* [ ] Type `git add -A` and press `Enter`
-
-* This tells git to look through the _entire_ folder structure for new changes and "stage" them
-
-* [ ] Type `git commit -m "YOUR COMMIT MESSAGE"` to "label" the commit
-
-* This is typically something like `git commit -m "Fixing a typo"` -- the message in quotes should be as descriptive as possible, while still remaining somewhat short
-
-* [ ] To send all changes to the server, type `git push`
-* [ ] At the prompt, input the password associated with the `SSH Key` you created earlier in this exercise (yesterday)
-
-Once the process finishes successfully, we're done!
+# how to run it; open html in a browser
