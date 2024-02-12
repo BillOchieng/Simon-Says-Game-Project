@@ -66,6 +66,7 @@ CSS Animations: Utilize CSS animations to make the game visually appealing. For 
 - Optimize Global Variables: Review and optimize the use of global variables. For instance, elements is derived from gameBtn but could be directly used where needed to reduce redundancy.
 - Modularize Code: Break down your JavaScript code into more modular functions for easier maintenance and readability. This approach helps in isolating functionality, making it easier to update or debug specific parts of the game.
 - Event Delegation: Instead of attaching an event listener to each game button, consider using event delegation to handle button clicks through a single listener on the parent element. This method is more efficient and scales better with more buttons.
+
 Accessibility Enhancements: Ensure the game is accessible to all users, including those with disabilities. This includes adding keyboard navigation support, ensuring color choices have enough contrast for colorblind users, and using ARIA attributes to make the game more screen-reader friendly.
 
 Progressive Web App (PWA): Convert the game into a PWA to allow users to 'install' it on their devices and play offline. This involves creating a service worker for caching and a manifest file to define the app's appearance and behavior when launched from a home screen.

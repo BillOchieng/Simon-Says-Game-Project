@@ -1,25 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-html{
+
+html {
   background: #FFF;
 }
 
 body {
-  background-color: goldenrod;
+  background-color: rgba(180, 174, 88, 0.712);
   margin: 0;
   padding: 1%;
 }
-container{
+
+container {
   display: grid;
   grid-template-columns: auto auto;
   width: 50vw;
   height: 50vw;
   margin: auto auto;
 }
-  
+
 .top-left,
 .top-right,
 .bottom-left,
-.bottom-right{
+.bottom-right {
   width: 175px;
   height: 175px;
   display: inline-block;
@@ -40,8 +42,8 @@ container{
 #bottom-left {
   background-color: yellow;
   border-bottom-left-radius: 100%;
-  
-  
+
+
 
 }
 
@@ -55,11 +57,11 @@ footer {
   grid-template-columns: auto auto auto;
 }
 
-#start{
+#start {
   font-family: "press start 2p", monospace;
 
 }
-  
+
 
 .center {
   margin: 0 auto;
@@ -82,6 +84,7 @@ footer {
   margin-top: 1rem;
   margin-left: center;
 }
+
 footer {
   font-family: "Press Start 2P", monospace;
   font-size: medium;
@@ -101,16 +104,17 @@ footer {
   border-radius: 10px;
 }
 
-.counter > p {
+.counter>p {
   font-size: 30px;
   margin: 0px;
   padding: 5%;
 }
 
-.box{
-  width:64px;
+.box {
+  width: 64px;
   margin: auto;
 }
+
 .off {
   background-color: #000;
 }
@@ -125,19 +129,21 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-  #top-left
-  {
+  #top-left {
     width: 175px;
     height: 175px;
     display: inline-block;
   }
+
   .darkYellow {
     margin-left: 36%;
   }
+
   .darkRed {
     margin-left: 36%;
   }
 }
+
 /*
 @media (min-width:320px) {
   .darkRed,
@@ -223,6 +229,6 @@ footer {
 
 /* @media only screen and (max-width: 1024px) { 
    */
-  /*
+/*
     Selectors go here
   */
